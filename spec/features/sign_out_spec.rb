@@ -11,7 +11,7 @@ feature 'Allows user to sign out' do
   end
   scenario 'User cannot post if not signed in' do
     visit '/'
-    click_button("Continue without sign in")
+    click_button("View Recent Chits?")
     expect(page).not_to have_content("New Post")
     expect(page).to have_content("You must be signed in to post")
   end

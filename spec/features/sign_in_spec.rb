@@ -10,7 +10,7 @@ feature 'User Sign In' do
     register_new_user
     click_button("Log Out")
     sign_in_user
-    expect(page).to have_content('New Post')
+    expect(page).to have_button('Post!')
   end
   scenario 'Error message when incorrect sign in details' do
     visit '/'

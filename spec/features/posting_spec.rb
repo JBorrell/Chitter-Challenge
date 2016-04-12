@@ -19,15 +19,15 @@ feature 'New Posts' do
     register_new_user
     fill_in(:chit, with: 'Name test!')
     click_button('Post!')
-    expect(page).to have_content("James Borrell:")
+    expect(page).to have_content("James Borrell -")
   end
 
   scenario "Post shows time created/posted" do
     register_new_user
     fill_in(:chit, with: 'Time test!')
     click_button('Post!')
-    time = (Time.new).strftime("%H:%M - %D")
-    expect(page).to have_content("Posted at: #{time}")
+    time = Time.new.strftime("%l%P - %b %-d, %Y")
+    expect(page).to have_content(time)
   end
 
 end
