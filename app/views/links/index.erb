@@ -3,7 +3,7 @@
 </html>
 <body>
   <% if flash[:goodbye] %>
-    <%= flash[:goodbye] %><br>
+    <p class="flash"><%= flash[:goodbye] %></p>
   <% end %>
   <h3 id="tag_name">Everyone's favorite social portal :)</h3>
   <% if current_user %>

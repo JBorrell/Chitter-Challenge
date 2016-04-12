@@ -22,9 +22,10 @@ class Chitter < Sinatra::Base
   end
 
   post '/new_post' do
-    time = Time.new.strftime("%H:%M - %D")
+    time = Time.new.strftime("%l%P - %b %-d, %Y")
     Post.create(body: params[:chit],
-                username: User.get(session[:user_id]).name,
+                username: current_user.name,
+                name: current_user.username,
                 time: "#{time}")
     redirect '/posts'
   end

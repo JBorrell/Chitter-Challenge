@@ -5,5 +5,6 @@ class Post
   property :body, Text
   property :time, String
   property :username, String
+  property :name, String
 
 end

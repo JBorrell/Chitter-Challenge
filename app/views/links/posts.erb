@@ -1,25 +1,37 @@
 <% if flash[:welcome] %>
-  <%= flash[:welcome] %>
+  <p class="flash"><%= flash[:welcome] %></p>
 <% end %>
+<div id="credits">
+  Author:<br>
+  <p>James Borrell</p>
+  <p><a href="https://github.com/JBorrell">Github</a></p>
+  <p><a href="https://uk.linkedin.com/in/james-borrell-2281b1116">LinkedIn</a></p>
+  © 2016 Chitter
+</div>
+<div id="posts">
+  <% if current_user %>
+    <div id="new_post">
+      <form action='/new_post' method='post'>
+        <input id="chit" type="text" name="chit" placeholder="What's up?" required>
+        <input type='submit' value='Post!'>
+      </form>
+    </div>
+  <% else %>
+    <h3>You must be signed in to post</h3>
+  <% end %>
 
-<h1>Chitters of the day!</h1>
+  <h2>Recent Chits</h2>
+  <% if @posts %>
+    <% @posts.reverse.each do |post| %>
+      <div id="post">
+         <span id="name"><%= post.username %></span>
+           - @<%= post.name %>
+         <p id="body"><%= post.body %></p>
+         <%= post.time %>
+      </div>
+    <% end %>
+  <% else %>
+    <p>No Chits Yet!<p>
+  <% end %>
 
-<% if current_user %>
-<h2>New Post</h2>
-<form action='/new_post' method='post'>
-  <textarea name="chit" cols="35" rows="3" placeholder="What's up?"></textarea>
-  <input type='submit' value='Post!'>
-</form>
-<% else %>
-<h3>You must be signed in to post</h3>
-<% end %>
-
-<h2>Recent Posts</h2>
-
-<% @posts.reverse.each do |post| %>
-  <li>
-     <%= post.username%>:<br>
-     <%= post.body %><br>
-     Posted at: <%= post.time %><br><br>
-  </li>
-<% end %>
+</div>
