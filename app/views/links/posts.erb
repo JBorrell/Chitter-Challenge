@@ -6,7 +6,7 @@
   <p>James Borrell</p>
   <p><a href="https://github.com/JBorrell">Github</a></p>
   <p><a href="https://uk.linkedin.com/in/james-borrell-2281b1116">LinkedIn</a></p>
-  © 2016 Chitter
+  © 2016 Chatter
 </div>
 <div id="posts">
   <% if current_user %>
@@ -20,7 +20,7 @@
     <h3>You must be signed in to post</h3>
   <% end %>
 
-  <h2>Recent Chits</h2>
+  <h2>Recent Chat</h2>
   <% if @posts %>
     <% @posts.reverse.each do |post| %>
       <div id="post">

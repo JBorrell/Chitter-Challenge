@@ -61,7 +61,7 @@ img {
   background-color: #0ab3ef;
   border-radius: 20px;
   float: right;
-  margin-right: 20%;
+  margin-right: 10%;
   text-align: center
 }
 
@@ -83,12 +83,12 @@ img {
   background-color: #0ab3ef;
   border-radius: 20px;
   float: left;
-  margin-left: 20%;
+  margin-left: 10%;
   text-align: center
 }
 
 #no_sign_in input {
-  font-size: 2em;
+  font-size: 1.3em;
   width: 80%;
   margin-bottom: 30px;
 }
