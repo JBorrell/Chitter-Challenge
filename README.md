@@ -1,11 +1,13 @@
-Welcome to Chitter!
+Welcome to Chatter!
 ===================
 
-Chitter is an interactive social platform which allows users to sign up
+Chatter is an interactive social platform which allows users to sign up
 for a service which allows them to post thoughts, activities, tasks, feelings or
 pretty much anything they want, to a website where others can see it. The website
 also allows users to read other users posts, showing them who posted what & at
 what time the post was created!
+
+Try it out here! https://www.chatter-live.herokuapp.com
 
 To Run:
 -------
